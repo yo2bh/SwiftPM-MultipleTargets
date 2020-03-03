@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3A15E6C2240E3AB40003F09E /* ImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A15E6C0240E3AB40003F09E /* ImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A15E6D4240E3EB90003F09E /* NetworkImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A15E6D3240E3EB90003F09E /* NetworkImageDownloader.swift */; };
 		3A15E6D7240E3F1F0003F09E /* ShowImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A15E6D6240E3F1F0003F09E /* ShowImage.swift */; };
+		3A5E5E8A240E5CA100147468 /* NetworkImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E5E89240E5CA000147468 /* NetworkImageDownloader.swift */; };
+		3A5E5E8B240E5CA400147468 /* NetworkImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E5E89240E5CA000147468 /* NetworkImageDownloader.swift */; };
 		3A928ECF2404E40C00F73B33 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A928ECD2404E40C00F73B33 /* NetworkManager.swift */; };
 		3A928ED02404E40C00F73B33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A928ECE2404E40C00F73B33 /* Constants.swift */; };
 		OBJ_21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Constants.swift */; };
@@ -20,8 +21,8 @@
 		3A15E6BE240E3AB40003F09E /* ImageDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A15E6C0240E3AB40003F09E /* ImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		3A15E6C1240E3AB40003F09E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A15E6D3240E3EB90003F09E /* NetworkImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkImageDownloader.swift; path = Sources/SharedClasses/NetworkImageDownloader.swift; sourceTree = SOURCE_ROOT; };
 		3A15E6D6240E3F1F0003F09E /* ShowImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowImage.swift; sourceTree = "<group>"; };
+		3A5E5E89240E5CA000147468 /* NetworkImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkImageDownloader.swift; path = Sources/NetworkImageDownloader.swift; sourceTree = "<group>"; };
 		3A928ECD2404E40C00F73B33 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Sources/NetworkManager/NetworkManager.swift; sourceTree = "<group>"; };
 		3A928ECE2404E40C00F73B33 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/NetworkManager/Constants.swift; sourceTree = "<group>"; };
 		"NetworkManager::NetworkManager::Product" /* NetworkManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,21 +59,13 @@
 			path = ImageDownloader;
 			sourceTree = "<group>";
 		};
-		3A15E6CB240E3D990003F09E /* SharedClasses */ = {
-			isa = PBXGroup;
-			children = (
-				3A15E6D3240E3EB90003F09E /* NetworkImageDownloader.swift */,
-			);
-			path = SharedClasses;
-			sourceTree = "<group>";
-		};
-		3A15E6D5240E3F1F0003F09E /* DownloadImage */ = {
+		3A15E6D5240E3F1F0003F09E /* DownloadImageTarget */ = {
 			isa = PBXGroup;
 			children = (
 				3A15E6D6240E3F1F0003F09E /* ShowImage.swift */,
 			);
-			name = DownloadImage;
-			path = Sources/DownloadImage;
+			name = DownloadImageTarget;
+			path = Sources/DownloadImageTarget;
 			sourceTree = "<group>";
 		};
 		3A928ECB2404E3B400F73B33 /* NetworkManager */ = {
@@ -124,21 +117,21 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3A15E6D5240E3F1F0003F09E /* DownloadImage */,
-				3A15E6CB240E3D990003F09E /* SharedClasses */,
-				OBJ_8 /* NetworkManager */,
+				3A5E5E89240E5CA000147468 /* NetworkImageDownloader.swift */,
+				3A15E6D5240E3F1F0003F09E /* DownloadImageTarget */,
+				OBJ_8 /* NetworkManagerTarget */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_8 /* NetworkManager */ = {
+		OBJ_8 /* NetworkManagerTarget */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Constants.swift */,
 				OBJ_10 /* NetworkManager.swift */,
 			);
-			name = NetworkManager;
-			path = Sources/NetworkManager;
+			name = NetworkManagerTarget;
+			path = Sources/NetworkManagerTarget;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -239,7 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A15E6D7240E3F1F0003F09E /* ShowImage.swift in Sources */,
-				3A15E6D4240E3EB90003F09E /* NetworkImageDownloader.swift in Sources */,
+				3A5E5E8B240E5CA400147468 /* NetworkImageDownloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +244,7 @@
 				OBJ_21 /* Constants.swift in Sources */,
 				OBJ_22 /* NetworkManager.swift in Sources */,
 				3A928ED02404E40C00F73B33 /* Constants.swift in Sources */,
+				3A5E5E8A240E5CA100147468 /* NetworkImageDownloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
