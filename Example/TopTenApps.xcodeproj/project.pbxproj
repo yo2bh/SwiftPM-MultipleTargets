@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3A14EBBB23C4681B00D918EF /* TopTenAppsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A14EBBA23C4681B00D918EF /* TopTenAppsModel.swift */; };
 		3A14EBC223C486E200D918EF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A14EBC123C486E200D918EF /* ActivityIndicator.swift */; };
-		3A5E5E82240E435400147468 /* Package.swift in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5E5E81240E435400147468 /* Package.swift */; };
+		3A5E5E93240E5DC800147468 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = 3A5E5E92240E5DC800147468 /* NetworkManager */; };
+		3A5E5E95240E5DC800147468 /* DownloadImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3A5E5E94240E5DC800147468 /* DownloadImage */; };
 		3AB4B0BF23BDFB0C0006BFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4B0BE23BDFB0C0006BFBA /* AppDelegate.swift */; };
 		3AB4B0C323BDFB0C0006BFBA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4B0C223BDFB0C0006BFBA /* MainViewController.swift */; };
 		3AB4B0C623BDFB0C0006BFBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB4B0C423BDFB0C0006BFBA /* Main.storyboard */; };
@@ -26,7 +27,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3A5E5E82240E435400147468 /* Package.swift in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		3A14EBBA23C4681B00D918EF /* TopTenAppsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTenAppsModel.swift; sourceTree = "<group>"; };
 		3A14EBC123C486E200D918EF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		3A5E5E81240E435400147468 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		3AB4B0BB23BDFB0C0006BFBA /* TopTenApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTenApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB4B0BE23BDFB0C0006BFBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB4B0C223BDFB0C0006BFBA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5E5E95240E5DC800147468 /* DownloadImage in Frameworks */,
+				3A5E5E93240E5DC800147468 /* NetworkManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +63,6 @@
 		3AB4B0B223BDFB0C0006BFBA = {
 			isa = PBXGroup;
 			children = (
-				3A5E5E81240E435400147468 /* Package.swift */,
 				3AB4B0BD23BDFB0C0006BFBA /* TopTenApps */,
 				3AB4B0BC23BDFB0C0006BFBA /* Products */,
 			);
@@ -111,6 +111,8 @@
 			);
 			name = TopTenApps;
 			packageProductDependencies = (
+				3A5E5E92240E5DC800147468 /* NetworkManager */,
+				3A5E5E94240E5DC800147468 /* DownloadImage */,
 			);
 			productName = TopTenApps;
 			productReference = 3AB4B0BB23BDFB0C0006BFBA /* TopTenApps.app */;
@@ -141,6 +143,7 @@
 			);
 			mainGroup = 3AB4B0B223BDFB0C0006BFBA;
 			packageReferences = (
+				3A5E5E91240E5DC800147468 /* XCRemoteSwiftPackageReference "SwiftPM-MultipleTargets" */,
 			);
 			productRefGroup = 3AB4B0BC23BDFB0C0006BFBA /* Products */;
 			projectDirPath = "";
@@ -370,6 +373,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A5E5E91240E5DC800147468 /* XCRemoteSwiftPackageReference "SwiftPM-MultipleTargets" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yo2bh/SwiftPM-MultipleTargets.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A5E5E92240E5DC800147468 /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A5E5E91240E5DC800147468 /* XCRemoteSwiftPackageReference "SwiftPM-MultipleTargets" */;
+			productName = NetworkManager;
+		};
+		3A5E5E94240E5DC800147468 /* DownloadImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A5E5E91240E5DC800147468 /* XCRemoteSwiftPackageReference "SwiftPM-MultipleTargets" */;
+			productName = DownloadImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3AB4B0B323BDFB0C0006BFBA /* Project object */;
 }

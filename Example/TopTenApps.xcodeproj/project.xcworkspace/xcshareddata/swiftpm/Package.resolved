@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "NetworkManagerPackage",
+        "repositoryURL": "https://github.com/yo2bh/SwiftPM-MultipleTargets.git",
+        "state": {
+          "branch": "master",
+          "revision": "21808bf4a9114e32ef8f727c71143d21b1f8f788",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
